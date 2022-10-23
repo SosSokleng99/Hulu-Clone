@@ -84,9 +84,9 @@ const LiveTvTabs = () => {
                             <p className={styles.description}>{liveTVTabs[activeTabIndex].description}</p>
                             <div className={styles.channels}>
 
-                                {liveTVTabs[activeTabIndex].channels.map((channel) => {
+                                {liveTVTabs[activeTabIndex].channels.map((channel, idx: number) => {
                                     return (
-                                        <div className={styles.channel_bg}>
+                                        <div key={idx} className={styles.channel_bg}>
                                             <div className={styles.channel}>
                                                 <Image 
                                                     src={channel} 
