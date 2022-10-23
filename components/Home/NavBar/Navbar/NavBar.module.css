@@ -1,0 +1,60 @@
+/* NavBar */
+
+.navbar_container {
+    display:flex;
+    justify-content: space-between;
+    padding: 12px 26px;
+    /* margin: 0 auto; */
+    width: 100vw;
+    height: auto;
+  
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .left_nav_items {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  
+.left_nav_items > div {
+    padding: 0 14px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .left_nav_items span {
+    padding: 8px;
+  }
+
+  
+.right_nav_items{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .right_nav_items > div {
+    padding: 0 14px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .right_nav_items span {
+    padding: 8px;
+  }
+
+  
+
+.hulu_nav_logo {
+    width: 70px;
+    cursor: pointer;
+  }
+  
+  

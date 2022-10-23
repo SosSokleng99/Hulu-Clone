@@ -1,0 +1,170 @@
+/* // Lives TV Section */
+
+.live_tv {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 16px;
+    margin: auto;
+    max-width: 860px;
+
+}
+
+
+.live_tv_section {
+    width: 100vw;
+    height: 80vh;
+}
+
+.bg_wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.live_tabs {
+    position:absolute;
+    width: 960px;
+    padding-top: 20vh;
+    padding-left: 15vw;
+}
+
+.live_tab_spotlight {
+    width: 50%;
+    text-align: left;
+}
+
+.live_tab_buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+.lives_btn_tab {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: rgb(202 202 202);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+    
+}
+
+.lives_btn_tab_active {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+    
+}
+
+
+
+.lives_btn_tab:hover {
+    color:#586174 ;
+}
+
+
+
+.tab_line {
+    position:absolute;
+    border: 3px solid white;
+    transition-duration: 600ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab_content {
+    margin-top: 30px;
+    width: 60%;
+    transition: all 10s ease-in-out;
+    order: 1;
+}
+
+@keyframes tab_content {
+    from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+
+.channels {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+
+}
+
+.channel_bg {
+    position: relative;
+    background: url(../../../images/network-logo-bg.png) no-repeat center center / cover;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.channel {
+    position:absolute;
+    width: 40px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+.live_tabs {
+    
+    width: 100%;
+    padding-top: 5vh;
+    padding-left: 0vw;
+  }
+  .live_tab_spotlight {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .live_tab_buttons {
+    justify-content: space-evenly;
+  }
+  .tab_content {
+    width: 100%;
+    margin: 70px auto;
+    text-align: center;
+  }
+
+  .channels {
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 425px) {
+    .live_tab_spotlight {
+        padding: 0 8px;
+      }
+
+  
+}

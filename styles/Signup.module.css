@@ -1,0 +1,84 @@
+.login {
+    background-color: lightgrey;
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav {
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.form_container {
+    background-color: #fff;
+    color: #333;
+    margin: 40px auto;
+    width: 420px;
+    /* height: 400px; */
+    padding: 26px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_wrapper {
+    margin-top: 24px;
+}
+
+
+.form_input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form_input > input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0.7px solid #333;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.login_btn {
+
+    background-color: #00ED82;
+    width: 100%;
+    color: #040404;
+    padding: 18px;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.forword_signup_text {
+    padding: 16px 0;
+}
+
+.form_message_container {
+    color: #333;
+    margin: 40px auto;
+    width: 420px;
+    /* height: 400px; */
+    padding: 26px 18px;
+}
+
+
+.form_message {
+    font-size: 14px;
+
+}
+
+.forgot_password_text {
+    font-weight: 300;
+    font-size: 14px;
+    color: steelblue;
+    cursor: pointer;
+}
+

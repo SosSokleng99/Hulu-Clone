@@ -1,0 +1,92 @@
+.dropdown_menu {
+    /* background-color: gainsboro ; */
+    padding: 8px 0;
+    border-radius: 4px;
+    position: relative;
+    width: 130px;
+    /* z-index: 1; */
+    cursor: pointer;
+  }
+  
+  .dropdown_items {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    width: 200%;
+    text-align: center;
+    height: auto;
+    top: 55px;
+    left: -100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  .dropdown_items:hover {
+    background-color: rgb(212, 212, 212);
+    color: rgb(86, 84, 84);
+  
+  }
+  .dropdown_items > div {
+    padding: 10px;
+  }
+  
+  .profile_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile_circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(168, 161, 161);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .user_name {
+    padding-left: 10px;
+  }
+
+  .user_name_text_dark {
+
+    color:#fff
+
+  }
+
+  .user_name_text_white {
+
+    color: #333
+
+  }
+  .drop_down_bg_dark {
+
+    color:#fff;
+    background-color: #333;
+
+  }
+
+  .drop_down_bg_white {
+
+    color: #333;
+    background-color: #fff;
+
+
+  }
+
+  .green_highlight[data-reach-menu-item][data-selected] {
+    background: #00ED82;
+  }
+
+  .red_highlight[data-reach-menu-item][data-selected] {
+    background: red;
+  }
+
+
+
+  
+  

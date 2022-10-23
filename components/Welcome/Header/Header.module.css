@@ -1,0 +1,115 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 30px;
+}
+
+.login_button {
+    background-color: transparent;
+    color: #ffffff99;
+    margin: 4px 2px;
+    padding: 10px 16px;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.login_button:hover {
+    background-color: #586174;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.header {
+    height: 640px;
+    background: url("https://www.hulu.com/static/hitch/s3/attachments/ckzoylttk003x1v6mcd4p0gk2-ckxgnvin29r771v5fyutjbf5c-bundle-6400x2640-desktop-1x.jpg") no-repeat center center / cover;
+}
+
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 230px;
+}
+
+
+
+.header_logos {
+    position: relative;
+    width: 500px;
+    margin: 18px;
+
+}
+
+.header_text {
+    font-size: 24px;
+    text-align: center;
+    margin: 8px;
+}
+
+.btn_cta {
+    background-color: #00ED82;
+    width: 100%;
+    color: #040404;
+    margin: 14px 112px;
+    padding: 18px;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 8px;
+    margin: 16px 80px;
+    max-width: 850px;
+    cursor: pointer;
+
+}
+
+.btn_cta:hover {
+    background-color: #75dcae;
+
+}
+
+.legal_term {
+    font-size: 10px;
+    color: #ffffff99;
+    margin: 6px;
+    cursor: pointer;
+  }
+  
+  .cta_link {
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 16px;
+  }
+
+  @media (max-width: 768px) {
+
+    .header_content {
+        margin: 50px 100px;
+    }
+
+  }
+
+  @media (max-width: 425px) {
+
+    .header_content {
+        margin: 50px 20px;
+    }
+
+    .header_text {
+        font-size: 18px;
+    }
+
+    .header_logos {
+        width: 380px;
+    }
+  }
