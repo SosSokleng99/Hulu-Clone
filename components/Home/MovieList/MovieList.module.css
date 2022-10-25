@@ -7,6 +7,8 @@
 .movie_list_section {
     display: flex;
     justify-content: space-between;
+    padding: 0 8px;
+
   }
   .movie_list_title {
     font-size: 20px;

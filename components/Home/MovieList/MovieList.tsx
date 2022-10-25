@@ -27,72 +27,81 @@ const MovieList = ({ listTitle, movies, movie_genres }: Props) => {
 
   const slider = React.useRef<Slider>(null)
 
-    const next = () => {
-        slider.current?.slickNext();
-    }
-    const prev = () => {
-        slider.current?.slickPrev();
-    }
+  const next = () => {
+    slider.current?.slickNext();
+  }
+  const prev = () => {
+    slider.current?.slickPrev();
+  }
 
-  var settings = {
-    dots: false,
-    arrows: false,
+  const settings = {
     infinite: true,
     speed: 500,
+    dots: true,
+    // autoplay: true,
+    draggable: false,
+    arrows: false,
     slidesToShow: 5,
     slidesToScroll: 5,
-    initialSlide: 0,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5,
-          infinite: true,
-          dots: true
-        }
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true
+            }
+        },
+        {
+          breakpoint: 648,
+          settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              dots: false
+          }
       },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          initialSlide: 3
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: false
+            }
         }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
     ]
-  };
+};
 
-  
+
 
   return (
     <>
       <div className={styles.movies_list_container}>
-       <div className={styles.movie_list_section}>
+        <div className={styles.movie_list_section}>
           <div className={styles.movie_list_title}>{listTitle}</div>
 
           <div className={styles.movie_list_btn_section}>
             <div className={styles.arrows_btn} onClick={() => prev()}><ArrowBackIos /></div>
-            <div className={styles.arrows_btn}  onClick={() => next()}><ArrowForwardIos /></div>
+            <div className={styles.arrows_btn} onClick={() => next()}><ArrowForwardIos /></div>
           </div>
         </div>
 
-        <Slider 
-        ref={slider} 
-        {...settings}>
-           {movieItems.map((movie: any[] | any) => (
-              <MovieItem
-                movie={movie}
-                key={movie.id}
-                movie_genres={movie_genres} />
-           ))}
+        <Slider
+          ref={slider}
+          {...settings}>
+          {movieItems.map((movie: any[] | any) => (
+            <MovieItem
+              movie={movie}
+              key={movie.id}
+              movie_genres={movie_genres} />
+          ))}
         </Slider>
 
       </div>

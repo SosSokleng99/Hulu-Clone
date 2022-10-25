@@ -1,0 +1,25 @@
+.nav_bar_links > div {
+    padding-right:14px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .nav_bar_links span {
+    padding-left: 10px;
+  }
+
+
+
+  
+@media (max-width: 648px) {
+    .nav_bar_links > div {
+        padding:8px 0;
+        text-align: center;
+        display: flex;
+        justify-content: left;
+      }
+    
+  }
+
+  

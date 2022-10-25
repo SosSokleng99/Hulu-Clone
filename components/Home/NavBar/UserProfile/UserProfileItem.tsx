@@ -13,17 +13,27 @@ import {
 	MenuButton,
 	MenuItem,
 	MenuLink,
+    MenuItems,
 } from "@reach/menu-button";
 
 import { ThemeContext } from '../../../ThemeProvider'
+import SwitchMUI from '../SwitchMUI';
+import { DarkMode } from '@mui/icons-material';
+
+import NavBarLinks from '../NavBarLinks';
+
+interface Props {
+    isMobile: boolean
+}
 
 
-const UserProfileItem = () => {
+const UserProfileItem = ({isMobile}: Props) => {
+
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
+
 
     // const [isOpen, setOpen] = React.useState(false)
     // const toggleDropdown = () => setOpen(!isOpen)
-
-    const {theme, toggleTheme} = React.useContext(ThemeContext);  
 
 
     const auth = useUser()
@@ -56,7 +66,18 @@ const UserProfileItem = () => {
                 </div>
 			</MenuButton>
 			<MenuList className={getDropDownBG()} style={{border: 'none', padding: '10px', borderRadius: '4px', top: '10px', position: 'absolute'}}>
-				<MenuItem className={styles.green_highlight} onSelect={() => alert("Profile")}>Profile</MenuItem>
+                {isMobile &&  
+                    <MenuItem onSelect={() => {}}>
+                    <NavBarLinks />
+                    </MenuItem>
+                }
+                <MenuItems className={styles.menu_items}>
+                        <DarkMode />
+                        <span>Night mode: {theme ? 'On' : 'Off'} </span>
+                        <SwitchMUI onClick={toggleTheme} checked={theme} />
+                </MenuItems>
+                
+				<MenuItem className={styles.green_highlight} onSelect={() => {}}>Profile</MenuItem>
 				<MenuItem className={styles.red_highlight} onSelect={handleSignOut}>Log out</MenuItem>
 			</MenuList>
 		</Menu>

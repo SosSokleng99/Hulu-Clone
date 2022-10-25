@@ -1,11 +1,21 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
 import styles from '../MovieCategory/MovieCategory.module.css'
-import React, {CSSProperties} from 'react';
+import React, { CSSProperties } from 'react';
 
-interface CSSProps extends CSSProperties {
+import Slider from "react-slick";
+import MovieCategoryItem from './MovieCategoryItem';
+
+
+export interface CSSProps extends CSSProperties {
     '--show-bg-img': string;
     '--show-bg-gif': string;
+}
+
+export interface CategoryShowProps {
+    id: number
+    category_name: string
+    category_image: string
+    category_gif: string
+    amount: number
 }
 
 
@@ -40,29 +50,87 @@ const categoryShow = [
     },
 
 ]
-  
-const MovieCategory: NextPage = () => {
-  return (
-      <div className={styles.movie_cates_container}>
-          <div className={styles.movie_cates_cards}>
-          {categoryShow.map((item) => (
-                <div key={item.id}  className={styles.preview_show} style={{
 
-                    '--show-bg-img': `url(${item.category_image})`,
-                    '--show-bg-gif': `url(${item.category_gif})`
+const MovieCategory = () => {
+
+    var settings = {
+        dots: false,
+        arrows: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: false,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 648,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              // initialSlide: 3.5
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
+
+    return (
+        <div className={styles.movie_cates_container}>
+
+            <Slider
+                {...settings}
+            >
+                {categoryShow.map((cate_item: CategoryShowProps) => (
+                     <MovieCategoryItem key={cate_item.id} cate_item = {cate_item}  />
+
+                ))}
+
+            </Slider>
+            
 
 
-                } as CSSProps}>
-                    <div className={styles.preview_show_gradient}>
-                        <div className={styles.category_title}>{item.category_name}</div>
-                        <div className={styles.amount_shows}>{item.amount} Titles</div>
+            {/* <div className={styles.movie_cates_cards}>
+                {categoryShow.map((item) => (
+                    <div key={item.id} className={styles.preview_show} style={{
+
+                        '--show-bg-img': `url(${item.category_image})`,
+                        '--show-bg-gif': `url(${item.category_gif})`
+
+
+                    } as CSSProps}>
+                        <div className={styles.preview_show_gradient}>
+                            <div className={styles.category_title}>{item.category_name}</div>
+                            <div className={styles.amount_shows}>{item.amount} Titles</div>
+                        </div>
                     </div>
-                </div>
 
-        ))}
-          </div>
-      </div>
-  )
+                ))}
+            </div> */}
+        </div>
+    )
 }
 
 export default MovieCategory

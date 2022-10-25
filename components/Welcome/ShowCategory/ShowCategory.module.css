@@ -5,6 +5,7 @@
     padding-top: 88px;
     max-width: 768px;
     margin: 0 auto;
+    background-color: black;
 }
 
 .description {
@@ -32,6 +33,7 @@
 .category_title {
     font-size: 20px;
     font-weight: 300;
+    color: #fff;
 }
 
 .color_gradient {

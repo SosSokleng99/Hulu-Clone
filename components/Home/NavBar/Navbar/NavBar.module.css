@@ -3,8 +3,8 @@
 .navbar_container {
     display:flex;
     justify-content: space-between;
-    padding: 12px 26px;
-    /* margin: 0 auto; */
+    align-items: center;
+    padding: 12px 22px;
     width: 100vw;
     height: auto;
   
@@ -21,7 +21,7 @@
   }
 
   
-.left_nav_items > div {
+.left_nav_items > * {
     padding: 0 14px;
     text-align: center;
     display: inline-flex;
@@ -30,6 +30,13 @@
   
   .left_nav_items span {
     padding: 8px;
+  }
+
+  .desktop_links > div {
+    padding-right:14px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
   }
 
   

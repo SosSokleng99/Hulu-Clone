@@ -1,6 +1,6 @@
 .movie_card {
     position: relative;
-    width: 195px;
+    width: 192px;
     display: inline-block;
     margin: 15px 10px;
     aspect-ratio: 0.6666666666666666 / 1;
@@ -40,7 +40,7 @@
     z-index: 3;
     opacity: 0;
     transform: translateY(300px);
-    transition: 0.5s;
+    transition: 0.8s;
   }
   
   
@@ -63,6 +63,11 @@
     position: absolute;
     bottom: 20px;
   
+  }
+
+  .featured_movie_info > span {
+    padding-right: 6px;
+    font-weight: 300;
   }
   
   .rating_badge {

@@ -1,9 +1,10 @@
 
 .movie_cates_container {
     height: auto;
-    width: 100vw;
+    /* width: 100vw; */
     margin: 40px auto;
     text-align: center;
+    padding-left: 14px;
     max-width: 1024px;
   }
   
@@ -11,7 +12,7 @@
     display: grid;
     grid-template-columns: repeat(4, 240px);
       justify-content: center;
-      column-gap: 22px;
+      column-gap: 12px;
   }
   
   .preview_show {
@@ -50,9 +51,9 @@
     background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
   }
   .category_title {
-    font-size: 26px;
-    font-weight: 700;
-    /* top: 50px; */
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
     color: #fff;
     border-radius: 20px;
     transition: all 0.4s ease-out;
@@ -98,5 +99,28 @@
     color: rgb(210, 210, 210);
     font-size: 16px;
   }
+
+  
+@media (max-width: 648px) {
+  .preview_show {
+
+    width: 280px;
+    height: auto;
+  }
+  
+
+  
+}
+
+@media (max-width: 425px) {
+  .preview_show {
+
+    width: 400px;
+    height: auto;
+  }
+  
+
+  
+}
   
   

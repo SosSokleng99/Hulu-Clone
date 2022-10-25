@@ -97,3 +97,57 @@
     font-weight: 700;
     cursor: pointer;
   }
+
+  .rating_badge {
+    width: 28px;
+    height: 14px;
+    border-radius: 2px;
+    color: #040404;
+    background-color: #00ed82;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700  ;
+    text-transform: uppercase;
+  
+  }
+
+  @media (max-width: 768px) {
+    .featured_contents {
+      
+      
+      left: 60px;
+  
+    }
+    
+}  
+
+@media (max-width: 600px) {
+
+  .featured_contents {
+      
+      
+    text-align: center;
+    /* left: 0; */
+    margin: 0 auto;
+    bottom: 10%;
+    top: unset;
+
+  }
+  .featured_btn_section {
+
+    justify-content: center;
+  }
+  
+  
+}
+
+@media (max-width: 425px) {
+
+  .featured_contents {
+    left: 0;
+    padding: 0 16px;
+  }
+    
+
+    
+}

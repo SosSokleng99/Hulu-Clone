@@ -36,13 +36,16 @@ const Featured: NextPage<Props> = ({featured_movie, movie_genres}: Props): JSX.E
             }}>
               <div className={styles.featured_gradient}></div>
               <div className={styles.featured_contents}>
-                  <h5>What&aposs Trending Now</h5>
+                  <h5>Trending Now</h5>
                   <div className={styles.featured_title}>{featured.title}</div>
                   <p className={styles.featured_description}>{featured.overview}</p>
                   <div className={styles.featured_movie_info}>
                     <span>{ movie_genre[0].name }</span>
                     <span>•</span>
                     <span>{moment(featured.release_date).format('YYYY')}</span>
+                    <span>•</span>
+                    <div className={styles.rating_badge}>{featured.vote_average}</div>
+
                   </div>
                   <div className={styles.featured_btn_section}>
                     <button className={styles.play_btn}><PlayArrow/><span>Play</span></button>

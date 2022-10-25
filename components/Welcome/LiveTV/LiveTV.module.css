@@ -16,7 +16,7 @@
 
 .live_tv_section {
     width: 100vw;
-    height: 80vh;
+    height: 750px;
 }
 
 .bg_wrap {
@@ -37,7 +37,7 @@
 }
 
 .live_tab_spotlight {
-    width: 50%;
+    width: 55%;
     text-align: left;
 }
 
@@ -136,13 +136,12 @@
 @media (max-width: 768px) {
 
 .live_tabs {
-    
     width: 100%;
     padding-top: 5vh;
     padding-left: 0vw;
   }
   .live_tab_spotlight {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
   }
   .live_tab_buttons {
@@ -162,13 +161,20 @@
 
 
 @media (max-width: 425px) {
+
+  .tab_content {
+    width: 100%;
+   
+  }
+
     .live_tab_spotlight {
-        padding: 0 8px;
+      width: 100%;
+        padding: 0 3px;
       }
 
       .channels {
         
-        width: 80%;
+        width: 70%;
       }
 
   
