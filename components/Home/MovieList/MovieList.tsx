@@ -53,6 +53,14 @@ const MovieList = ({ listTitle, movies, movie_genres }: Props) => {
             }
         },
         {
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              dots: false
+          }
+      },
+        {
           breakpoint: 648,
           settings: {
               slidesToShow: 3,

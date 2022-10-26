@@ -103,4 +103,23 @@
     font-size: 12px;
   
   }
+
+  @media (max-width: 768px) {
+ 
+    .movie_card {
+      width: 225px;
+    }
+
+  
+  }
+
+  @media (max-width: 648px) {
+ 
+    .movie_card {
+      width: 190px;
+    }
+
+  
+  }
+   
    

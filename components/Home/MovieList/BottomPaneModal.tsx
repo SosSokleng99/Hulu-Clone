@@ -9,6 +9,10 @@ import Youtube from 'react-youtube'
 import moment from 'moment'
 import Drawer from '../Drawer/Drawer'
 
+import TextTruncate from 'react-text-truncate';
+import { useMediaQuery } from 'react-responsive';
+
+
 
 type Props = {
     visiblePane: boolean,
@@ -28,6 +32,9 @@ const BottomPaneModal = ({ visiblePane, movieItem, closePane, movie_genre, trail
 
     const [videos] = React.useState(trailors);
     const [trailor, setTrailor] = React.useState<ResultsProps | null>(null);
+
+    const isTablet = useMediaQuery({ maxWidth: 768 });
+
 
     React.useEffect(() => {
         if (videos?.results) {
@@ -51,7 +58,11 @@ const BottomPaneModal = ({ visiblePane, movieItem, closePane, movie_genre, trail
                         </div>
                         <div>
                             <div className={styles.modal_movie_title}>{movieItem?.title}</div>
-                            <p className={styles.featured_description}>{movieItem?.overview}</p>
+                            <p className={styles.featured_description}>  
+                              {!isTablet && 
+                                <TextTruncate line={4} text={movieItem?.overview} />
+                              }        
+                            </p>
                             <div className={styles.featured_movie_info}>
                                 <span>{movie_genre[0].name}</span>
                                 <span>•</span>
