@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../Navbar/NavBarLinks.module.css'
+import styles from '../NavBar/NavBarLinks.module.css'
 import { LineWeightOutlined, BoltOutlined, LibraryAddCheckOutlined, SearchOutlined, AccountCircleOutlined } from '@mui/icons-material';
 
 
