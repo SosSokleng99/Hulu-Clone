@@ -113,13 +113,26 @@
 }
 
 @media (max-width: 425px) {
+
+  .preview_show_gradient {
+    padding: 90px;
+  }
   .preview_show {
 
-    width: 400px;
+    width: 390px;
     height: auto;
   }
   
 
+  
+}
+
+@media (max-width: 410px) {
+  .preview_show {
+
+    width: 380px;
+    height: auto;
+  }
   
 }
   
