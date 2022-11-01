@@ -20,7 +20,7 @@ const NavBar = () => {
 
   const { theme, toggleTheme } = React.useContext(ThemeContext);
 
-  const isMobile = useMediaQuery({ maxWidth: 754 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
 
   return (

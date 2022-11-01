@@ -67,7 +67,7 @@ const UserProfileItem = ({isMobile}: Props) => {
 			</MenuButton>
 			<MenuList className={getDropDownBG()} style={{border: 'none', padding: '10px', borderRadius: '4px', top: '10px', position: 'absolute'}}>
                 {isMobile &&  
-                    <MenuItem onSelect={() => {}}>
+                    <MenuItem className={styles.no_highlight} onSelect={() => {}}>
                     <NavBarLinks />
                     </MenuItem>
                 }

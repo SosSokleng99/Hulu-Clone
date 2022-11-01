@@ -4,7 +4,8 @@ import styles from '../MovieList/BottomPaneModal.module.css'
 import { PlayArrow, ArrowForward } from '@mui/icons-material';
 import { MoviesProps } from './MovieList';
 import { ResultsProps, VideosProps } from './MovieItem';
-import Youtube from 'react-youtube'
+// import Youtube from 'react-youtube'
+import YouTube, { YouTubeProps } from 'react-youtube';
 
 import moment from 'moment'
 import Drawer from '../Drawer/Drawer'
@@ -34,6 +35,28 @@ const BottomPaneModal = ({ visiblePane, movieItem, closePane, movie_genre, trail
     const [trailor, setTrailor] = React.useState<ResultsProps | null>(null);
 
     const isTablet = useMediaQuery({ maxWidth: 768 });
+
+    // const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+    //     // access to player in all event handlers via event.target
+    //     event.target.pauseVideo();
+    //   }
+
+    const opts: YouTubeProps['opts'] = {
+            width: '100%',
+            height: '100%',
+            playerVars: {
+                autoplay: 1,
+                controls: 0,
+                cc_load_policy: 0,
+                fs: 0,
+                iv_load_policy: 0,
+                modestbranding: 1,
+                rel: 0,
+                showinfo: 0,
+                loop: 1
+            },
+        
+      };
 
 
     React.useEffect(() => {
@@ -81,26 +104,11 @@ const BottomPaneModal = ({ visiblePane, movieItem, closePane, movie_genre, trail
                         <div className={styles.movie_trailor_gredient}></div>
                         {trailor ?
                             <>
-                                <Youtube
+                                <YouTube
                                     videoId={trailor?.key}
                                     iframeClassName={styles.youtube_container}
-                                    opts={
-                                        {
-                                            width: '100%',
-                                            height: '100%',
-                                            playerVars: {
-                                                autoplay: 1,
-                                                controls: 0,
-                                                cc_load_policy: 0,
-                                                fs: 0,
-                                                iv_load_policy: 0,
-                                                modestbranding: 1,
-                                                rel: 0,
-                                                showinfo: 0,
-                                                loop: 1
-                                            },
-                                        }
-                                    }
+                                    opts={opts}
+                                    // onReady={onPlayerReady}
                                 />
 
                             </> :

@@ -78,21 +78,21 @@ const Drawer = ({
   }
 
   return createPortal(
-    <FocusTrap active={isOpen}>
-      <div
-        aria-hidden={isOpen ? "false" : "true"}
-        className={cn("drawer-container", {
-          open: isOpen,
-          in: isTransitioning,
-          className
-        })}
-      >
-        <div className={cn("drawer", position)} role="dialog">
-          {children}
-        </div>
-        <div className="backdrop" onClick={onClose} />
+    <div
+      aria-hidden={isOpen ? "false" : "true"}
+      className={cn("drawer-container", {
+        open: isOpen,
+        in: isTransitioning,
+        className
+      })}
+    >
+      <div className={cn("drawer", position)} role="dialog">
+
+        {children}
+
       </div>
-    </FocusTrap>,
+      <div className="backdrop" onClick={onClose} />
+    </div>,
     portalRootRef.current
   );
 };

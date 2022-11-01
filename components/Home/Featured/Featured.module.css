@@ -113,8 +113,6 @@
 
   @media (max-width: 768px) {
     .featured_contents {
-      
-      
       left: 60px;
   
     }
@@ -127,27 +125,28 @@
       
       
     text-align: center;
-    /* left: 0; */
     margin: 0 auto;
     bottom: 10%;
     top: unset;
+    left: unset;
+    max-width: unset;
+    padding: 0 12px;
+    bottom: 5%;
 
   }
-  .featured_btn_section {
+  .featured_title {
+    font-size: 36px;
+  }
 
+
+  .featured_description {
+    max-width: unset;
+  }
+
+
+  .featured_btn_section {
     justify-content: center;
   }
   
   
-}
-
-@media (max-width: 425px) {
-
-  .featured_contents {
-    left: 0;
-    padding: 0 16px;
-  }
-    
-
-    
 }

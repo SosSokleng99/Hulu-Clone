@@ -12,7 +12,7 @@
 
 
   
-@media (max-width: 648px) {
+@media (max-width: 768px) {
     .nav_bar_links > div {
         padding:8px 0;
         text-align: center;

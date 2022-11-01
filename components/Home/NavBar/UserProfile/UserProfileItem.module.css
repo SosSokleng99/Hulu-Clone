@@ -104,6 +104,10 @@
     background: red;
   }
 
+  .no_highlight[data-reach-menu-item][data-selected] {
+    background: transparent;
+  }
+
   .center_item[data-reach-menu-item] {
     display: inline-flex;
     align-items: center;

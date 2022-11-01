@@ -111,24 +111,6 @@ const MovieCategory = () => {
             </Slider>
             
 
-
-            {/* <div className={styles.movie_cates_cards}>
-                {categoryShow.map((item) => (
-                    <div key={item.id} className={styles.preview_show} style={{
-
-                        '--show-bg-img': `url(${item.category_image})`,
-                        '--show-bg-gif': `url(${item.category_gif})`
-
-
-                    } as CSSProps}>
-                        <div className={styles.preview_show_gradient}>
-                            <div className={styles.category_title}>{item.category_name}</div>
-                            <div className={styles.amount_shows}>{item.amount} Titles</div>
-                        </div>
-                    </div>
-
-                ))}
-            </div> */}
         </div>
     )
 }
